@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table표</title>
+    <style>
+      table {
+        width: 100%;
+        height: 100px;
+      }
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <table>
+    <h1>테이블 태그</h1>
+    <!--  table>caption+tr>th*3^tr>td*3^tr>td*3 삭제방지용 -->
+    em(약어) : table>caption+tr>th*3^tr>td*3^tr>td*3
+    <br />
+    ---------------------------
+    <table>
+      <!-- 표의 제목 -->
+      <caption>표의 제목</caption>
+      <!-- tr: 데이터 행을 만드는 태그 -->
+      <tr>
+        <!-- table header : 테이블 헤더 -->
+        <th>셀1</th>
+        <th>셀2</th>
+        <th>셀3</th>
+      </tr>
+      <tr>
+        <td>셀4</td>
+        <td>셀5</td>
+        <td>셀6</td>
+        <td>셀7</td>
+      </tr>
+      <tr>
+        <td>셀8</td>
+        <td>셀9</td>
+        <td>셀10</td>
+      </tr>
+    </table>
+    ------------------------------------------
+
+    <p>table>caption+tr>th*4^tr>td*4^tr>td*4</p>
+    <p>
+      셀 합치기
+      <li>colspan : 열 합치기</li>
+      <li>rowspan : 행 합치기</li>
+    </p>
+    <table>
+      <caption>전화번호부</caption>
+      <tr>
+        <th colspan="2">1</th>
+        <th>3</th>
+        <th>4</th>
+      </tr>
+      <tr>
+        <td rowspan="2">5</td>
+        <td rowspan="2">6</td>
+        <td rowspan="2">7</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>12</td>
+      </tr>
+    </table>
+
+    ---------------------------
+    <table>
+      <caption>전화번호부</caption>
+      <tr>
+        <th colspan="2">이름</th>
+        <th>나이</th>
+        <th>전화번호</th>
+      </tr>
+      <tr>
+        <td rowspan="2">홍</td>
+        <td rowspan="2">길동</td>
+        <td rowspan="2">10</td>
+        <td>010-1111</td>
+      </tr>
+      <tr>
+        <td>010-2222</td>
+      </tr>
+    </table>
+    --------------------------------------------
+    <br />
+    ------------연습문제---------------
+    <table>
+      <caption>
+        <strong>mordern browser</strong>
+        <p>국내에서 자주 사용하는 브라우저</p>
+      </caption>
+      <tr>
+        <th>브라우저</th>
+        <th>제조업체</th>
+        <th>다운로드</th>
+      </tr>
+      <tr>
+        <td>크롬</td>
+        <td>goole</td>
+        <td>www.</td>
+      </tr>
+
+      <tr>
+        <td>파이어폭스</td>
+        <td>mozila</td>
+        <td>www.</td>
+      </tr>
+    </table>
+
+
+  </body>
+</html>

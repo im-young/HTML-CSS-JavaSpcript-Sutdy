@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복습_form</title>
+  </head>
+  <body>
+    <form action="../home_p.html" method="post">
+      <fieldset id="fieldset1" style="width: 100px">
+
+        <legend>회원정보</legend>
+        아이디:
+        <input type="text" value="hong" />
+        <br />
+        패스워드 :
+        <input type="password" />
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend>과목</legend>
+        <!-- 체크박스 - html, css(기존 선택),js -->
+        HTML
+        <input type="checkbox" name="" />
+        CSS
+        <input type="checkbox" checked />
+        JS
+        <input type="checkbox" />
+        <br />
+        <br />
+        <!-- 라디오 - 상중하 -> 기존선택 x -->
+        상
+        <input type="radio" name="grade" id="상" />
+        중
+        <input type="radio" name="grade" id="중"/>
+        하
+        <input type="radio" name="grade" id="하"/>
+      </fieldset>
+      <!-- 버튼(전송) -->
+      <input type="submit" value="전송" />
+      <!-- 버튼(취소) -->
+      <input type="reset" value="취소" />
+      <!-- 문제점
+       from - method 안줌, form - action 안줌
+       radio : name 안줘서 다중선택
+       -과목 에 value 를 안줘서 전송시 값 전송x (: 링크에 stringquery이 안나옴 )
+       -회원가입에 id 를 안적으면 값이 전송 안됨  -->
+      ===================================================
+      T <br>
+      <!-- form>fieldset>legend+label+input:text+label+input:password+br -->
+      <form action="">
+        <fieldset>
+          <legend>회원정보</legend>
+          <label for="input-id">아이디:</label><input type="text" name="" id="input-id">
+          <label for="">비밀번호:</label><input type="password" name="" id=""><br>
+        </fieldset>
+      <!-- fieldset>legend+(label>input:checkbox)*3 - -->
+      <fieldset>
+        <legend>과목</legend>
+          <label><input type="checkbox" name="subject" value="option-html"></label>
+          <label><input type="checkbox" name="subject"value="option-css"></label>
+          <label><input type="checkbox" name="subject"value="option-js"></label>
+
+          <label>상<input type="radio" name="grade" id="upper"></label>
+          <label>중<input type="radio" name="grade" id="middle"></label>
+          <label>하<input type="radio" name="grade" id="lower"></label>
+        
+      </fieldset>
+
+      
+        </form>
+      
+  </body>
+</html>

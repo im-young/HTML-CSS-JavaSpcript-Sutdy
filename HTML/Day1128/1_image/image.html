@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지</title>
+  </head>
+  <body>
+    <h1>Image</h1>
+    <!-- 현재 폴더에 있는 그림 갖고오기 -->
+    <!-- 이미지 테그 : 자기 닫음 테그 -->
+    <img src="./images/다운로드.jpeg" alt="강아지" />
+    <img src="./images/다운로드2.jpeg" alt="벚꽃" />
+    <!-- 상위 폴더의 하위 폴더에 있는 리소스를 참조 -->
+    <img src="../images/" alt="" />
+
+    <!-- ------------------------ -->
+    <!-- 블록 element라서 줄바꿈 발생함-->
+    <figure>
+      <img src="./images/고양이.jpeg" alt="고양이" />
+      <figcaption>고양이</figcaption>
+    </figure>
+    <!-- --------------------------- -->
+
+    <!-- 링크로 이미지 가지고 오기 -->
+    <!-- 주소: 이미지 주소 복사 -->
+    <img
+      src="https://i.namu.wiki/i/QKyqu4ouPPHA1fUp2OLUFFeJvjao24WfH2l0x1KzkbPfI0MDLymq0qiFEsbDeYp9A5nfhRjN_onVRCWZGpFGxvirWcqBjxsGcQ679cLZ_f-0c3EIv2BbggPkn-EflZ2AijNNmU_XlZuTw-QI81uXVw.webp"
+      alt=" 구름" />
+    <!-- ------------------------------------------ -->
+
+    <!-- <iframe> : 외부의 html 문서 및 컨텐츠를 가지고 올때 사용하는 태그 -->
+    <!-- 참고 페이지 :https://wikidocs.net/86838 -->
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/Nm7PwPwesJU?si=HXLSzfDntB8odK5P"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen></iframe>
+    <!--allowfullscreen : 전체화면 -->
+    <iframe width="560" height="315" src="../home_p.html"></iframe>
+  </body>
+</html>

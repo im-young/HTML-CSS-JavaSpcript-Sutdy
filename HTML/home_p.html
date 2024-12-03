@@ -1,0 +1,93 @@
+<!doctype html>
+<!-- html 주석-->
+<!-- ctrl + /-->
+
+<!-- html 무서의 시작을 알리는 부분 -->
+<html lang="en">
+  <!-- 브라우저에 html 문서에 대한 정보를 주는 태그 -->
+  <head>
+    <!-- html 문서의 메타데이터를 정의하는데 사용 -->
+    <!-- 문자 인코딩 지정 -->
+    <meta charset="UTF-8" />
+    <!--  반응형 디자인, 초기 스케일 정보를 지원 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 문서의 제목, 탭에 적히는 것 -->
+    <title>Document</title>
+    <!--
+    <link>,<style>, <script> ...
+    javascript,css 등 외부 파일을 불러오는 태그를 넣는다. -->
+  </head>
+  <!-- 실제 브라우저에 보여주는 컨텐츠 -->
+  <body>
+    <!-- 링크 테그 -->
+    <h1>네이버</h1>
+    <a href="https://www.naver.com/"><h1>네이버h1</h1></a>
+    <h2>
+      <a href="https://www.naver.com/" target="_blank">네이버h2</a>
+      <a href="https://www.naver.com/" target="_parent">네이버h2</a>
+    </h2>
+    <!-- ------------------------------------------ -->
+    <!--
+    * Directory 경로
+      HTML 파일에서 경로는 파일 시스템 내의 위치를 지정
+      웹 페이지에서 다른 파일이나 리소스를 참조하는데 사용
+        - 상대경로(relative Path)
+        - 절대경로(Absolute path)
+    -->
+    <a href = "C:\workspace\workspace-busan-2024-3\HTML\0.route\route.html">절대경로</a>
+    <a href="..\HTML\Day1127_route\route.html">상대경로route</a>
+    <!-- ---- web 경로 --------------------------------------------------- 
+      web 경로 (url)
+      protocol  host            prot  Path   queryString
+      https:// www.domain.com : 8888 /login ?name=value
+      - http: protocol (http, https)
+      - www~ : host(사이트 도메인)
+      -:8888 : port(포트번호)
+      - login : Path
+      - ?name=valuee : queryString(get으로 값을 보냄)
+      => url 
+        origin = protocol + host + protocol
+          protocol = http, https
+          host : 사이트 도메인 (IP주소를 보기 쉽게 도메인 이름으로 변경)
+          prot : 포트번호    
+          path: 서버측의 사이트 내부 경로
+          queryString : 요청의 key와 value값
+          -->
+    <!-- --- 글자 작성 테그 ----------------------------------------- -->
+    <!-- 글자 사이즈 테그 -->
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+    <h3>제목3</h3>
+    <h4>제목4</h4>
+    <h5>제목5</h5>
+    <h6>여기까지 가능</h6>
+    <!-- -------------------------------------------- -->
+    <!--텍스트 테그-->
+    <p>
+      <strong>이건 텍스트 강조</strong><br>
+      텍스트(text) 또는 본문은 문학 이론에서 "읽을" 수 있는 모든 대상이다. 이 대상이 문학 작품이든, 도로 표지판이든,
+      도시 블록의 건물 배열이든, 의복 스타일이든
+      <span>상관없다.</span>
+      일종의 정보 메시지를 전달하는 일관된 기호 집합이다. <p>p</p>이 기호 집합은 물리적 형태나 표시되는 매체가 아니라 정보
+      메시지의 내용<div>측면에서 고려된다.</div> 
+    </p>
+    hello html!
+
+    
+    <br>
+    <br>========= Day 1128 ======================= <br>
+   
+
+        <!--list-->
+        <ul>
+          <li><a href="./Day1127_route/route.html">경로</a></li>
+          <li><a href="./Day1128/1_image/image.html">이미지</a></li>
+          <li><a href="./Day1128/2_text/2_1.text.html">글</a></li>
+          <li><a href="./Day1128/2_text/2_2.list.html">리스트</a></li>
+          <li><a href="./Day1128/3_table/3_1.table.html">테이블(표)</a></li>
+          <li><a href="./Day1202/4.from(tag).html">폼태그</a></li>
+          <li><a href="./Day1203/5.sementics.html">시맨틱 테그(내 블로그)</a></li>
+          <li><a href="./Day1203/5.sementics.html#contact">시맨틱 테그(내 블로그/내 연락처)</a></li>
+        </ul>
+  </body>
+</html>

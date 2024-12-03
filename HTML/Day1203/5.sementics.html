@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>semenics 시맨틱테그 예제</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      table {
+        width: 100%;
+        height: 100px;
+      }
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- emmet(약어) : header+main+footer(+는 병렬연결,> 포함(탭),*숫자는 갯수,^는 구분
+                      ctrl+space : 실행) -->
+    <header>
+      <h1>내 블로그</h1>
+      <!-- nav>ul(li>a)*3 -->
+      <nav>
+        <ul></ul>
+        <!-- #은 해당 아이디로 이동 -->
+        <li><a href="#home">홈</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#contact">연락처</a></li>
+      </nav>
+    </header>
+    <main>
+      <!-- section>h2+article>h3+p -->
+      <section>
+        <h2>최근 게시물</h2>
+        <article>
+          <h3>첫 번째 글</h3>
+          <p>이 글은 시맨틱 태그를 활용한 예제입니다.</p>
+        </article>
+      </section>
+      <!-- aside>h3+ul>(li>a)*2
+            aside 옆에 광고 or 리모컨 등 
+            사이들에 배치 x -> css로 해야함-->
+      <aside>
+        <h3>관련링크</h3>
+        <ul>
+          <li><a href="#">추천글1</a></li>
+          <li><a href="#">추천글2</a></li>
+        </ul>
+      </aside>
+      <!-- hr: 구분선 -->
+      <hr />
+      <section id="contact">
+        <h2>연락처 목록</h2>
+        <table>
+          <caption>전화번호부</caption>
+          <tr>
+            <th colspan="2">이름</th>
+            <th>나이</th>
+            <th>전화번호</th>
+          </tr>
+          <tr>
+            <td rowspan="2">홍</td>
+            <td rowspan="2">길동</td>
+            <td rowspan="2">10</td>
+            <td>010-1111</td>
+          </tr>
+          <tr>
+            <td>010-2222</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <input type="button" value="홈으로" onclick="location.href='../home_p.html'" />
+      <!-- 사이트에 관련 정첵, 연결되는 페이지 등이 들어감  -->
+      <!-- &copy: 저작권에 관한 내용 -->
+      <p>&copy;2024 내 블로그, 모든 권리 보유</p>
+      <!-- 특수문자 입력에 대하여 
+       &___; : 특수문자를 입력 가능-->
+      &dollar; &yen;
+      <br />
+      &apos; &amp;
+    </footer>
+  </body>
+</html>

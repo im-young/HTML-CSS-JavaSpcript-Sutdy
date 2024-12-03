@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        width: 100%;
+        height: 100px;
+      }
+      table,
+      td,
+      th {
+        border: 1px solid black;
+      }
+      th {
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- h1+p+hr>h2+hr*3 -->
+      <h1>온라인 카페</h1>
+      <p>우리 카페에 오신 것을 환영합니다! 커피와 다양한 음료를 즐기세요</p>
+      <hr />
+    </header>
+
+    <h2>카페메뉴</h2>
+    <!-- table>caption+tr>th*3^(tr>td*3)*3 -->
+    <table>
+      <caption>카페 음료 메뉴</caption>
+      <tr>
+        <th>음료</th>
+        <th>가격</th>
+        <th>설명</th>
+      </tr>
+      <tr>
+        <td>아메리카노</td>
+        <td>3500원</td>
+        <td>아주 진한 커피맛이 특징입니다.</td>
+      </tr>
+      <tr>
+        <td>카페라떼</td>
+        <td>4000원</td>
+        <td>부드럽고 고소한 맛의 커피입니다.</td>
+      </tr>
+      <tr>
+        <td>카라멜 마끼아또</td>
+        <td>4500원</td>
+        <td>달콤한 카라멜 맛이 추가된 음료입니댜</td>
+      </tr>
+    </table>
+    <hr />
+    <h2>인기 음료추천</h2>
+    <!-- ul>br+p+br+(ul*3) -->
+    <ul>
+      <p>놓치지 마세요!</p>
+      <li>아이스 아메리카노</li>
+      <li>카페 모카</li>
+      <li>녹차 라떼</li>
+    </ul>
+    <hr />
+    <h2>우리 카페의 분ㄴ위기</h2>
+    <img src="../Day1128/1_image/images/다운로드.jpeg" />
+    <p>편안한 분위기에서</p>
+    <hr />
+    <h2>고객 피드백</h2>
+    <p>우리 카페에 대한 의견을 남겨주세요</p>
+    <form action="" method="post">
+      이름 :
+      <input type="text" name="" id="" />
+      <br />
+      이메일 :
+      <input type="email" name="email" required />
+      <br />
+      피드백
+      <br />
+      <textarea nema="" id="" cols="80" rows="6"></textarea>
+      <br />
+      <input type="submit" value=" 피드백 보내기" />
+      <hr />
+    </form>
+  </body>
+  <footer>&copy;내 블로그. 모든 권리 보유.</footer>
+</html>
