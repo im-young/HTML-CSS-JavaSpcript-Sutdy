@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05 css 목록 관련 서식</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=favorite" />
+    <style>
+      /*#1. 목록 스타일 작성*/
+      #first {
+        /*1. 기본*/
+        list-style-type: none;
+        /*2. 이미지 사용(url)이용해서 */
+        /*list-style-image: url(../HTML/Day1128/1_image/images/logout_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg);*/
+        /*3. 위치 조정*/
+        list-style-position: inside; /*inside : 들여쓰기  */
+        /*4. 코드 복사해오기*/
+        /*.material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+          }*/
+        /*그라데이션*/
+        list-style-type: radial-gradient(to red, blue);
+      }
+      ol {
+        list-style-type: upper-roman;
+        list-style-position: inside;
+      }
+      /* #2. 가상 요소
+      ::after
+      ::before 
+      (띄어쓰기 중요! _::before ,after 하면 적용안됨)
+      (하나씩만 먹힘 두개 안먹힘(밑에 recomend 참고))
+        - 가상요소는 실제 DOM(document object model(노션 제일 처음이 있는 html 구좀모양))구조에 영향을 주지 않고, 스타일링과 레이아웃을 조작
+        - 텍스트, 이미지, 속성을 삽입 할 수 있음
+      */
+      /* .menu {
+        list-style-type: none;
+      } */
+      .menu,
+      .menu li::before {
+        /* 이건 li에만 적용(ul에 적용 안하면 기본인 점(disc) 모양이 나옴)*/
+        list-style-type: none;
+        content: '👍';
+      }
+      .menu li::after {
+        /*이 문지열은 복붙 안됨*/
+        content: '리스트 각 요소에 일괄적으로 붙일 내용';
+        color: blue;
+        font-weight: 100;
+      }
+      /*.recomend::after {
+        content: '추천';
+      } */
+
+      /*3. 죽은 링크 클릭하면 안간다는 걸 알려줌 */
+      a::after {
+        content: '(' attr(href) ')';
+      }
+      .dead-link {
+        text-decoration: line-through;
+      }
+      .dead-link::after {
+        display: inline;
+        content: '❌';
+        width: 12px;
+        height: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- h2+ul>li*3 -->
+    <h2>목록 스타일 예제</h2>
+    <ul id="first">
+      <!-- #1. 목록 스타일 속성 -->
+      <li>
+        <span class="material-symbols-outlined">favorite</span>
+        첫번째 아이템
+      </li>
+      <li>두번째 아이템</li>
+      <li>세번째 아이템</li>
+    </ul>
+    <ol>
+      <li>첫번째 단계</li>
+      <li>두번째 단계</li>
+      <li>세번째 단계</li>
+    </ol>
+    <!-- # 2. 가상요소  -->
+    <ul class="menu">
+      <li class="recomend">menu-1</li>
+      <li>menu-2</li>
+      <li>menu-3</li>
+      <li>menu-4</li>
+      <li>menu-5</li>
+    </ul>
+    <!-- 3.  -->
+    <p>
+      단락 내용 혹은 어떤 기사 내용 어쩌고 저쩌고
+      <a href="http://www.naver.com">네이버 기사로 뭔가 검색하고 싶음</a>
+    </p>
+    <p>
+      두번째 단락 어쩌고 저쩌고
+      <a href="" class="dead-link">기사 내용을 더 보려면 클릭 는 사실실 기사가 삭제됨</a>
+    </p>
+  </body>
+</html>
+
+<!-- # 기타, 참고
+-->
+
+<!-- # 1.목록 스타일 속성
+기호, 기호의 위치, 사용자 지정 이미지로 기호 넣기
+- font, google.com 에서 아이콘 다운반다 넣어보기(svg파일 권장)
+  -- svg는 벡터형식의 파일, 선명함, 코드로 편집이 가능
+  -- png는 고정된 해상도의 크기, 투명한 배경 -> 크기 조정시에는 품질 손상의 가능성이 있음
+-->
+<!--# 2. 가상요소(pseudo-element)
+      ::after
+      ::before
+  - 가상요소는 실제 DOM(document object model(노션 제일 처음이 있는 html 구좀모양))구조에 영향을 주지 않고, 스타일링과 레이아웃을 조작
+  - 텍스트, 이미지, 속성을 삽입 할 수 있음
+-->

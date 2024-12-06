@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>복합선택자</title>
+    <style>
+      /*1.자손 선택자
+      뒤에 ()가 있으면 함수를 넣어서 구체적으로 적용가능(ex.짝수번째만 )*/
+      /*1-1.div안에 있는 모든 요소에 적용*/
+      div > p {
+        font-weight: bold;
+      }
+
+      div > p:first-child {
+        /*1-2.div의 첫번재 자식 요소에 적용*/
+        font-weight: bold;
+      }
+
+      /*2. 인접 요소 선택자
+      - A + B 는 바로 뒤에 위치한 B에게만 스타일 적용
+      - 첫번째 요소는 기준으로만 사용되며 스타일이 적용되니 않음*/
+      /*1-1. div안에 p뒤에 p(전부->'세번째 문장'도 적용됨)*/
+      div p + p {
+        color: blue; /*두번째 문장만 파래짐*/
+      }
+      /*2-2. div안에 들어있는 p태그의 바로 위에 형제 요소인 div에만 스타일이 적용되게 함*/
+      div p + div {
+        color: green;
+      }
+      /*3. 특정 후손의 자손 선택자(div안에 p의 세번째)*/
+      div p:nth-child(3) {
+        /*p에 인접한것도 적용(1-1.)되서 파란색 적용됨*/
+        text-decoration: underline;
+      }
+      /*4.일반 형제 선택자
+      `~` 는 뒤에 나오는 모든 요소를 적용*/
+      /*더 구체적인 걸 가르키기 때문에 우선도가 높다*/
+      .element ~ .siblings {
+        text-decoration: line-through;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>복합 선택자 예제</h2>
+    <div>
+      <p>첫번째 문장</p>
+      <p>두번째 문장</p>
+      <p>세번째 문장</p>
+      <div>인접형제</div>
+      <div>p와 인접하지 않은 형제(div 의 인접형제)</div>
+      <p class="element">네번째 문장</p>
+      <p class="siblings">클래스 이름이 element인 일반 형제들 이면서 해당 클래스를 가리키고 있어야함</p>
+      <p class="diffrent-class-name">클래스 이름이 element인 일반 형제들 이면서 해당 클래스를 가리키고 있어야함</p>
+      <p class="siblings">클래스 이름이 element인 일반 형제들 이면서 해당 클래스를 가리키고 있어야함</p>
+    </div>
+  </body>
+</html>
+<!-- 참고
+ - 더 구체적인걸 가리키고 있으면 우선순위 적용됨(위치랑 상관없이 우선적용) -->
